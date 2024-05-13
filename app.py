@@ -18,9 +18,9 @@ def handle_form():
     if len(id_number)!=10:
         return "身分證號碼應該為10碼", 400
     if not id_number[0].isalpha():
-        return "第一個字元應該為英文字母碼", 400        
-    if len(id_number)!=10:
-        return "身分證號碼應該為10碼", 400
+        return "第一個字元應該為英文字母碼", 400 
+    if not id_number[1:].isdigit():
+        return "身分證號碼後九碼應為數字", 400
     if len(id_number)!=10:
         return "身分證號碼應該為10碼", 400
     if len(id_number)!=10:
